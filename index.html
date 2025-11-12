@@ -1,14 +1,13 @@
 <!DOCTYPE html>
-<html lang="id" data-theme="light">
-<head>
+<html lang="id" data-theme="light"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dies Natalis ke-[GANTI TAHUN] | SMAN 1 NGADILUWIH</title>
+    <title>Dies Natalis ke-26 | SMAN 1 NGADILUWIH</title>
     
     <!-- Google Fonts & Font Awesome -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <!-- --- KODE CSS DIMULAI DI SINI --- -->
@@ -134,7 +133,7 @@
             text-align: center;
             color: #fff;
             /* Ganti URL ini dengan gambar background sekolah Anda */
-            background: url('https://mediasuarapublik.com/wp-content/uploads/2022/10/SMAN-1-Ngadiluwih.jpg') no-repeat center center/cover;
+            background: url('https://beritapatroli.co.id/wp-content/uploads/2025/07/IMG-20250719-WA0015-1000x600.jpg') no-repeat center center/cover;
         }
 
         .hero-overlay {
@@ -263,6 +262,49 @@
             color: #000;
         }
 
+        /* --- Khusus untuk Loket Utama --- */
+        .loket-card.main {
+            grid-column: 1 / -1; /* Membuat card memenuhi 1 baris penuh */
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            text-align: left;
+            padding: 2.5rem;
+            background: linear-gradient(135deg, var(--card-bg) 0%, var(--bg-color) 100%);
+            border: 2px solid var(--primary-color);
+        }
+
+        .main-card-content {
+            max-width: 60%;
+        }
+
+        .loket-card.main h3 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .loket-card.main p {
+            margin-bottom: 1.5rem;
+        }
+
+        .main-card-icon {
+            font-size: 5rem;
+            color: var(--primary-color);
+            opacity: 0.8;
+        }
+
+        .main-button {
+            background-color: var(--secondary-color);
+            color: #000;
+            font-weight: 700;
+        }
+
+        .main-button:hover {
+            background-color: var(--primary-color);
+            color: #fff;
+        }
+
         /* --- SCHEDULE SECTION --- */
         .schedule-section {
             padding: 80px 0;
@@ -373,6 +415,21 @@
                 align-items: flex-start;
                 gap: 0.5rem;
             }
+
+            /* Responsif untuk Loket Utama di Mobile */
+            .loket-card.main {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .main-card-content {
+                max-width: 100%;
+            }
+            
+            .main-card-icon {
+                margin-top: 1rem;
+                font-size: 4rem;
+            }
         }
     </style>
     <!-- --- KODE CSS SELESAI DI SINI --- -->
@@ -404,7 +461,7 @@
             <div class="hero-overlay"></div>
             <div class="hero-content container">
                 <!-- GANTI TEKS DI BAWAH INI -->
-                <h1>Dies Natalis ke-[2025]</h1>
+                <h1>Dies Natalis ke-26</h1>
                 <h2>SMAN 1 NGADILUWIH</h2>
                 <p class="hero-tagline">"[GANTI DENGAN TEMA ACARA]"</p>
                 <p class="hero-date">[GANTI TANGGAL ACARA]</p>
@@ -413,10 +470,23 @@
         </section>
 
         <section id="loket" class="loket-section container">
-            <h2>Loket Pendaftaran & Pembelian Tiket</h2>
+            <h2>Loket Pendaftaran &amp; Pembelian Tiket</h2>
             <p>Pilih acara yang ingin Anda ikuti atau saksikan.</p>
             
             <div class="loket-grid">
+                <!-- Kartu Loket Utama (BARU) -->
+                <div class="loket-card main">
+                    <div class="main-card-content">
+                        <h3>Loket Utama</h3>
+                        <p>Dapatkan semua jenis tiket akses umum untuk rangkaian acara Dies Natalis. Ini adalah pintu gerbang utama Anda menuju semua kegiatan meriah.</p>
+                        <!-- GANTI LINK DI BAWAH INI -->
+                        <a href="[https://6dca6f5d27476644f2.gradio.live/]" target="_blank" class="card-button main-button">Beli Tiket Umum</a>
+                    </div>
+                    <div class="main-card-icon">
+                        <i class="fas fa-ticket-alt"></i>
+                    </div>
+                </div>
+
                 <!-- Kartu Loket 1 -->
                 <div class="loket-card">
                     <div class="card-icon">
@@ -444,7 +514,7 @@
                     <div class="card-icon">
                         <i class="fas fa-store"></i>
                     </div>
-                    <h3>Bazaar & UMKM</h3>
+                    <h3>Bazaar &amp; UMKM</h3>
                     <p>Jelajahi berbagai stand makanan, minuman, dan produk kreatif.</p>
                     <!-- GANTI LINK DI BAWAH INI -->
                     <a href="[LINK LOKET BAZAAR]" target="_blank" class="card-button">Info Stand</a>
@@ -476,11 +546,11 @@
                 </div>
                 <div class="schedule-item">
                     <span class="time">13:00 - 16:00</span>
-                    <span class="event">Bazaar & Pameran Karya</span>
+                    <span class="event">Bazaar &amp; Pameran Karya</span>
                 </div>
                 <div class="schedule-item">
                     <span class="time">18:00 - 21:00</span>
-                    <span class="event">Puncak Acara: Pentas Seni & Malam Apresiasi</span>
+                    <span class="event">Puncak Acara: Pentas Seni &amp; Malam Apresiasi</span>
                 </div>
             </div>
         </section>
@@ -489,17 +559,17 @@
             <h2>Galeri Kegiatan</h2>
             <div class="gallery-grid">
                 <!-- GANTI URL GAMBAR DENGAN FOTO SEKOLAH ANDA -->
-                <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=1887&auto=format&fit=crop" alt="Galeri 1">
-                <img src="https://images.unsplash.com/photo-1581084282646-a1c512138ed3?q=80&w=1887&auto=format&fit=crop" alt="Galeri 2">
-                <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?q=80&w=2070&auto=format&fit=crop" alt="Galeri 3">
-                <img src="https://images.unsplash.com/photo-1581833971358-2c8b55038a6d?q=80&w=1974&auto=format&fit=crop" alt="Galeri 4">
+                <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&amp;w=1887&amp;auto=format&amp;fit=crop" alt="Galeri 1">
+                <img src="https://images.unsplash.com/photo-1581084282646-a1c512138ed3?q=80&amp;w=1887&amp;auto=format&amp;fit=crop" alt="Galeri 2">
+                <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?q=80&amp;w=2070&amp;auto=format&amp;fit=crop" alt="Galeri 3">
+                <img src="https://images.unsplash.com/photo-1581833971358-2c8b55038a6d?q=80&amp;w=1974&amp;auto=format&amp;fit=crop" alt="Galeri 4">
             </div>
         </section>
     </main>
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 Panitia Dies Natalis SMAN 1 NGADILUWIH. All Rights Reserved.</p>
+            <p>© 2024 Panitia Dies Natalis SMAN 1 NGADILUWIH. All Rights Reserved.</p>
             <div class="social-links">
                 <!-- GANTI LINK MEDIA SOSIAL DI BAWAH INI -->
                 <a href="[LINK INSTAGRAM]" target="_blank"><i class="fab fa-instagram"></i></a>
@@ -556,5 +626,5 @@
     </script>
     <!-- --- KODE JAVASCRIPT SELESAI DI SINI --- -->
 
-</body>
-</html>
+
+</body></html>
