@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dies Natalis ke-[GANTI TAHUN] | SMAN 1 NGADILUWIH</title>
+    
+    <!-- Google Fonts & Font Awesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- --- KODE CSS DIMULAI DI SINI --- -->
+    <style>
+        /* --- VARIABEL DAN GLOBAL --- */
+        :root {
+            --primary-color: #0056b3; /* Ganti dengan warna utama sekolah */
+            --secondary-color: #ffc107; /* Ganti dengan warna aksen */
+            --bg-color: #f4f7f6;
+            --card-bg: #ffffff;
+            --text-color: #212529;
+            --text-color-light: #6c757d;
+            --header-bg: rgba(255, 255, 255, 0.95);
+            --shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            --border-radius: 12px;
+        }
+
+        [data-theme="dark"] {
+            --primary-color: #4dabf7;
+            --secondary-color: #ffd43b;
+            --bg-color: #121212;
+            --card-bg: #1e1e1e;
+            --text-color: #e0e0e0;
+            --text-color-light: #a0a0a0;
+            --header-bg: rgba(30, 30, 30, 0.95);
+            --shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            transition: background-color 0.3s ease, color 0.3s ease;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* --- HEADER & NAVIGASI --- */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background-color: var(--header-bg);
+            backdrop-filter: blur(10px);
+            box-shadow: var(--shadow);
+            transition: background-color 0.3s ease;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .logo img {
+            height: 40px;
+            margin-right: 10px;
+            border-radius: 50%; /* Optional: membuat logo bulat */
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .theme-toggle-btn {
+            background: none;
+            border: none;
+            color: var(--text-color);
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .theme-toggle-btn:hover {
+            transform: rotate(20deg);
+        }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            position: relative;
+            height: 90vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+            /* Ganti URL ini dengan gambar background sekolah Anda */
+            background: url('https://images.unsplash.com/photo-1581078426770-6d336e5de7bf?q=80&w=1974&auto=format&fit=crop') no-repeat center center/cover;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+
+        .hero-tagline {
+            font-size: 1.2rem;
+            font-style: italic;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero-date {
+            font-size: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--primary-color);
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 50px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: var(--secondary-color);
+            color: #000;
+            transform: translateY(-3px);
+        }
+
+        /* --- LOKET SECTION (GRADIO STYLE) --- */
+        .loket-section {
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .loket-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .loket-section p {
+            color: var(--text-color-light);
+            margin-bottom: 3rem;
+        }
+
+        .loket-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .loket-card {
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .loket-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+        }
+
+        .card-icon {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .loket-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .loket-card p {
+            color: var(--text-color-light);
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .card-button {
+            padding: 10px 25px;
+            background-color: var(--primary-color);
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+
+        .card-button:hover {
+            background-color: var(--secondary-color);
+            color: #000;
+        }
+
+        /* --- SCHEDULE SECTION --- */
+        .schedule-section {
+            padding: 80px 0;
+            background-color: var(--card-bg);
+        }
+
+        .schedule-section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .schedule-list {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .schedule-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem;
+            border-bottom: 1px solid var(--bg-color);
+        }
+
+        .schedule-item:last-child {
+            border-bottom: none;
+        }
+
+        .schedule-item .time {
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .schedule-item .event {
+            font-weight: 600;
+        }
+
+        /* --- GALLERY SECTION --- */
+        .gallery-section {
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .gallery-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+
+        .gallery-grid img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: var(--border-radius);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-grid img:hover {
+            transform: scale(1.05);
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background-color: var(--card-bg);
+            color: var(--text-color-light);
+            text-align: center;
+            padding: 2rem 0;
+            border-top: 1px solid var(--bg-color);
+        }
+
+        .social-links {
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            color: var(--text-color-light);
+            font-size: 1.5rem;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--primary-color);
+        }
+
+        /* --- RESPONSIVE DESIGN --- */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none; /* Untuk navigasi mobile, bisa diganti dengan hamburger menu */
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero h2 {
+                font-size: 1.8rem;
+            }
+
+            .schedule-item {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5rem;
+            }
+        }
+    </style>
+    <!-- --- KODE CSS SELESAI DI SINI --- -->
+
+</head>
+<body>
+
+    <header>
+        <nav class="container">
+            <!-- GANTI 'logo-sman1.png' dengan file logo Anda -->
+            <a href="#" class="logo">
+                <img src="https://via.placeholder.com/80x80.png?text=LOGO" alt="Logo SMAN 1 NGADILUWIH">
+                <span>SMAN 1 NGADILUWIH</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#home">Beranda</a></li>
+                <li><a href="#loket">Loket</a></li>
+                <li><a href="#jadwal">Jadwal</a></li>
+                <li><a href="#galeri">Galeri</a></li>
+            </ul>
+            <button id="theme-toggle" class="theme-toggle-btn">
+                <i class="fas fa-moon"></i>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-overlay"></div>
+            <div class="hero-content container">
+                <!-- GANTI TEKS DI BAWAH INI -->
+                <h1>Dies Natalis ke-[GANTI TAHUN]</h1>
+                <h2>SMAN 1 NGADILUWIH</h2>
+                <p class="hero-tagline">"[GANTI DENGAN TEMA ACARA]"</p>
+                <p class="hero-date">[GANTI TANGGAL ACARA]</p>
+                <a href="#loket" class="cta-button">Dapatkan Tiket Anda</a>
+            </div>
+        </section>
+
+        <section id="loket" class="loket-section container">
+            <h2>Loket Pendaftaran & Pembelian Tiket</h2>
+            <p>Pilih acara yang ingin Anda ikuti atau saksikan.</p>
+            
+            <div class="loket-grid">
+                <!-- Kartu Loket 1 -->
+                <div class="loket-card">
+                    <div class="card-icon">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <h3>Pentas Seni</h3>
+                    <p>Saksikan penampilan memukau dari siswa-siswi terbaik kami.</p>
+                    <!-- GANTI LINK DI BAWAH INI -->
+                    <a href="[LINK LOKET PENTAS SENI]" target="_blank" class="card-button">Beli Tiket</a>
+                </div>
+
+                <!-- Kartu Loket 2 -->
+                <div class="loket-card">
+                    <div class="card-icon">
+                        <i class="fas fa-running"></i>
+                    </div>
+                    <h3>Lomba Olahraga</h3>
+                    <p>Daftarkan tim Anda dan raih kemenangan dalam berbagai cabang olahraga.</p>
+                    <!-- GANTI LINK DI BAWAH INI -->
+                    <a href="[LINK LOKET LOMBA OLAHRAGA]" target="_blank" class="card-button">Daftar Sekarang</a>
+                </div>
+
+                <!-- Kartu Loket 3 -->
+                <div class="loket-card">
+                    <div class="card-icon">
+                        <i class="fas fa-store"></i>
+                    </div>
+                    <h3>Bazaar & UMKM</h3>
+                    <p>Jelajahi berbagai stand makanan, minuman, dan produk kreatif.</p>
+                    <!-- GANTI LINK DI BAWAH INI -->
+                    <a href="[LINK LOKET BAZAAR]" target="_blank" class="card-button">Info Stand</a>
+                </div>
+
+                <!-- Kartu Loket 4 -->
+                <div class="loket-card">
+                    <div class="card-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>Pameran Karya</h3>
+                    <p>Nikmati karya seni dan inovasi dari para siswa.</p>
+                    <!-- GANTI LINK DI BAWAH INI -->
+                    <a href="[LINK LOKET PAMERAN]" target="_blank" class="card-button">Lihat Karya</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="jadwal" class="schedule-section container">
+            <h2>Jadwal Acara</h2>
+            <div class="schedule-list">
+                <div class="schedule-item">
+                    <span class="time">08:00 - 09:00</span>
+                    <span class="event">Upacara Pembukaan</span>
+                </div>
+                <div class="schedule-item">
+                    <span class="time">09:00 - 12:00</span>
+                    <span class="event">Lomba Olahraga (Serentak)</span>
+                </div>
+                <div class="schedule-item">
+                    <span class="time">13:00 - 16:00</span>
+                    <span class="event">Bazaar & Pameran Karya</span>
+                </div>
+                <div class="schedule-item">
+                    <span class="time">18:00 - 21:00</span>
+                    <span class="event">Puncak Acara: Pentas Seni & Malam Apresiasi</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="galeri" class="gallery-section container">
+            <h2>Galeri Kegiatan</h2>
+            <div class="gallery-grid">
+                <!-- GANTI URL GAMBAR DENGAN FOTO SEKOLAH ANDA -->
+                <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=1887&auto=format&fit=crop" alt="Galeri 1">
+                <img src="https://images.unsplash.com/photo-1581084282646-a1c512138ed3?q=80&w=1887&auto=format&fit=crop" alt="Galeri 2">
+                <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?q=80&w=2070&auto=format&fit=crop" alt="Galeri 3">
+                <img src="https://images.unsplash.com/photo-1581833971358-2c8b55038a6d?q=80&w=1974&auto=format&fit=crop" alt="Galeri 4">
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Panitia Dies Natalis SMAN 1 NGADILUWIH. All Rights Reserved.</p>
+            <div class="social-links">
+                <!-- GANTI LINK MEDIA SOSIAL DI BAWAH INI -->
+                <a href="[LINK INSTAGRAM]" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="[LINK YOUTUBE]" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="[LINK FACEBOOK]" target="_blank"><i class="fab fa-facebook"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- --- KODE JAVASCRIPT DIMULAI DI SINI --- -->
+    <script>
+        // --- THEME TOGGLE (DARK/LIGHT MODE) ---
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const htmlElement = document.documentElement;
+        const icon = themeToggleBtn.querySelector('i');
+
+        const changeIcon = (isDark) => {
+            icon.className = isDark ? 'fas fa-sun' : 'fas fa-moon';
+        };
+
+        const currentTheme = localStorage.getItem('theme');
+        if (currentTheme) {
+            htmlElement.setAttribute('data-theme', currentTheme);
+            changeIcon(currentTheme === 'dark');
+        } else {
+            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                htmlElement.setAttribute('data-theme', 'dark');
+                changeIcon(true);
+            }
+        }
+
+        themeToggleBtn.addEventListener('click', () => {
+            const currentTheme = htmlElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            
+            htmlElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            changeIcon(newTheme === 'dark');
+        });
+
+        // --- SMOOTH SCROLL UNTUK NAVIGASI ---
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+    <!-- --- KODE JAVASCRIPT SELESAI DI SINI --- -->
+
+</body>
+</html>
